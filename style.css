@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  border: none;
+}
+body {
+  background-color: #333;
+}
+.container {
+  color: white;
+  width: min(99%, 2000px);
+  margin-inline: auto;
+  display: flex;
+}
+main {
+  flex: 1;
+}
+.main-container {
+  width: min(97%, 1280px);
+  margin-inline: auto;
+}
+/* utilities */
+.icon {
+  height: 24px;
+  background-color: transparent;
+}
+
+/* Aside */
+aside {
+  border-right: 1px solid grey;
+  /* TODO: change this to min(100vh, 100%) or something like this. */
+  height: 100vh;
+  flex-basis: 250px;
+}
+.side-menu-links {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+.side-menu-links > li {
+  padding: 0.65rem;
+  color: grey;
+  border-left: 4px solid transparent;
+  font-size: 1.5rem;
+}
+
+.side-menu-links > li:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-left: 4px solid red;
+  color: #f4f4f4;
+}
+
+/* Nav */
+.upper-section {
+  border-bottom: 1px solid grey;
+}
+.dashboard-title-wrapper {
+  display: flex;
+  gap: 20px;
+  padding-top: 10px;
+  align-items: center;
+}
+.dashboard-title {
+  font-size: 1.75rem;
+}
+nav {
+  display: flex;
+  padding-top: 10px;
+  gap: 30px;
+  align-items: center;
+}
+#search-icon-wrapper {
+  height: 40px;
+}
+.search-input-wrapper {
+  flex: 1;
+}
+.search-input {
+  background-color: #aaa;
+  border-radius: 9999px;
+  height: 30px;
+  width: 100%;
+  font-size: 1.5rem;
+  padding-inline: 10px;
+}
+.search-input:focus {
+  outline: none;
+}
+.profile {
+  display: flex;
+  align-items: center;
+}
+.profile-name {
+  margin-left: 10px;
+}
+
+.profile-options {
+  padding-block: 20px;
+}
+
+/* Showcase */
+.showcase {
+  display: flex;
+  margin-top: 1rem;
+}
+.section-heading {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: rgb(193, 192, 192);
+}
+.other-info {
+  flex-basis: 400px;
+  background-color: red;
+}
+
+/* Project */
+.project-display {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.project-description {
+  color: grey;
+}
+.card {
+  flex-basis: 250px;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-left: 8px solid rgb(165, 62, 233);
+  border-radius: 10px;
+}
+.project-heading {
+  color: rgb(183, 177, 177);
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+/* Announcement and People */
