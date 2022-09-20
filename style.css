@@ -56,10 +56,22 @@ header {
   border-bottom: 1px solid var(--dark-100);
   padding-bottom: 1rem;
 }
+.dashboard,
 .hamburger-menu-wrapper,
-.dashboard-pc,
-.dropdown-menu {
+.dashboarddropdown-menu {
   display: none;
+}
+.mobile-dashboard-view {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 60px;
+  width: 100%;
+  background-color: var(--dark-700);
+  padding-top: 2rem;
+}
+.fa-table-columns {
+  padding-left: 1rem;
 }
 .hamburger-menu-wrapper {
   position: relative;
@@ -213,7 +225,7 @@ main {
   .container {
     display: flex;
   }
-  .dashboard-pc {
+  .dashboard {
     display: block;
     flex-basis: 20%;
     border-right: 1px solid var(--dark-100);
@@ -287,7 +299,7 @@ main {
     gap: 5%;
   }
 
-  .dashboard-pc {
+  .dashboard {
     font-size: 18px;
   }
   .btn:active {

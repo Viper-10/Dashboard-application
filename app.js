@@ -1,18 +1,22 @@
-const sideBarIcon = document.querySelector(".fa-bars");
-const dropdownMenu = document.querySelector(".dropdown-menu");
+const mobileSideBarMenu = document.querySelector(".mobile-dashboard-view");
 let isDropdownOpen = false;
 
-sideBarIcon.addEventListener("click", showSideBar);
+window.addEventListener("click", handleClick);
 
-function showSideBar() {
-  isDropdownOpen = !isDropdownOpen;
-  changeDropdownVisibility();
+function handleClick(e) {
+  if (e.target.classList.contains("fa-bars")) {
+    isDropdownOpen = !isDropdownOpen;
+    changeDropdownVisibility();
+  } else if (!mobileSideBarMenu.contains(e.target)) {
+    isDropdownOpen = false;
+    changeDropdownVisibility();
+  }
 }
 
 function changeDropdownVisibility() {
   if (isDropdownOpen) {
-    dropdownMenu.style.display = "block";
+    mobileSideBarMenu.style.display = "block";
   } else {
-    dropdownMenu.style.display = "none";
+    mobileSideBarMenu.style.display = "none";
   }
 }
